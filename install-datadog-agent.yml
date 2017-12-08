@@ -1,0 +1,10 @@
+#
+#About: This will install datadog-agent
+#
+---
+- hosts: tomcat-servers
+  become: yes
+  user: ec2-user
+  roles:
+     - {role: datadog-agent,datadog_api_key: "XXXXXXX-your-api-key-XXXXX" }
+
